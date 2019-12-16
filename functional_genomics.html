@@ -1,0 +1,426 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>功能基因组学 - 计算机与生物学</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded "><a href="序言.html"><strong aria-hidden="true">1.</strong> 序言</a></li><li class="expanded "><a href="LINUX.html"><strong aria-hidden="true">2.</strong> Linux基础</a></li><li class="expanded "><a href="Python.html"><strong aria-hidden="true">3.</strong> Python基础</a></li><li class="expanded "><a href="functional_genomics.html" class="active"><strong aria-hidden="true">4.</strong> 功能基因组学</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">计算机与生物学</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2><a class="header" href="#功能基因组学" id="功能基因组学">功能基因组学</a></h2>
+<h3><a class="header" href="#blast序列搜索第一步" id="blast序列搜索第一步">BLAST，序列搜索第一步</a></h3>
+<p>生物信息学中，<code>BLAST</code>（英语：<strong>B</strong>asic <strong>L</strong>ocal <strong>A</strong>lignment <strong>S</strong>earch <strong>T</strong>ool）是一个用来比对生物序列的一级结构（如不同蛋白质的氨基酸序列或不同基因的DNA序列）的算法。 已知一个包含若干序列的数据库，<code>BLAST</code>可以让你在其中寻找与其感兴趣的序列相同或类似的序列。</p>
+<h4><a class="header" href="#blast在线版生物序列的google" id="blast在线版生物序列的google">BLAST在线版，生物序列的Google</a></h4>
+<blockquote>
+<p>问题：201X年，A组报道了B蛋白有降解PET（一种塑料）的活性，发了science。你很感兴趣，希望找到一个不一样的C蛋白也能水解PET，可以发AMB保毕业。</p>
+<p>流程：获取B蛋白序列，BLAST。 </p>
+</blockquote>
+<ol>
+<li>寻找B蛋白序列，获得的序列如下:</li>
+</ol>
+<p>此处的序列为fasta格式，一般来说，fasta格式中以<code>&gt;</code>开头的行是序列的名称物种等信息，接下来直到下一个<code>&gt;</code>之间的均为序列，60或80个字母为一行，但序列部分的分行不重要。</p>
+<pre >> sp|A0A0K8P6T7|PETH_IDESA Poly(ethylene terephthalate) hydrolase 
+MNFPRASRLMQAAVLGGLMAVSAAATAQTNPYARGPNPTAASLEASAGPFTVRSFTVSRPSGYGAGTVY
+YPTNAGGTVGAIAIVPGYTARQSSIKWWGPRLASHGFVVITIDTNSTLDQPSSRSSQQMAALRQVASLN
+GTSSSPIYGKVDTARMGVMGWSMGGGGSLISAANNPSLKAAAPQAPWDSSTNFSSVTVPTLIFACENDS
+IAPVNSSALPIYDSMSRNAKQFLEINGGSHSCANSGNSNQALIGKKGVAWMKRFMDNDTRYSTFACENP
+NSTRVSDFRTANCS</pre>
+<ol start="2">
+<li>BLAST search：</li>
+</ol>
+<p>访问<a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">NCBI BLAST</a>或<a href="https://www.uniprot.org/blast/">UniProt BLAST</a>，一般我在搜索核酸序列时会使用NCBI，搜索蛋白序列时使用UniProt，这两个数据库其实是互联互通的。以下介绍UniProt的使用。<br />
+<img src="CB_fig_1.png" alt="UniProt_BLAST" />
+最上面是搜索框，对于这条蛋白序列，只要在搜索框内输入<code>A0A0K8P6T7</code>进行搜索即可获得详细的<a href="https://www.uniprot.org/uniprot/A0A0K8P6T7">信息</a>。</p>
+<p>将fasta格式的序列或者序列号<code>A0A0K8P6T7 </code>输入进大文本框，点击<code>Run BLAST</code>，即可运行BLAST。</p>
+<table><thead><tr><th>名称</th><th>含义</th></tr></thead><tbody>
+<tr><td>Target database</td><td>被搜索的数据库，UniProtKB referance proteomes plus Swiss-Prot是最大最全的数据库，常用的还有Swiss-Prot，是所有人工注释的序列；PDB是所有的晶体结构的序列。</td></tr>
+<tr><td>E-Threshold</td><td>E值的上限，两个蛋白质序列E值越小，同源的可能性愈大。</td></tr>
+<tr><td>Matrix</td><td>打分矩阵，一般使用Auto，在输入序列存在较少同源序列，要寻找亲缘关系较远的序列时可使用BLOSUM-45，在输入序列存在较多同源序列，要寻找亲缘关系较近的序列时使用BLOSUM-80。</td></tr>
+<tr><td>Hits</td><td>返回结果的个数</td></tr>
+</tbody></table>
+<p>输出的结果如下：</p>
+<p>​	<img src="CB_fig_2.png" alt="png" /></p>
+<p>在<code>Alignment</code>部分，可以在感兴趣的条目中点击<code>View alignment</code>，查看两条序列的比对情况，一般来说<code>Identity</code>大于<strong>50%<strong>的序列就有可能拥有相似的功能，对于发育关系较远的蛋白，比如植物合成某些代谢产物的蛋白在细菌中的同源蛋白可能相似度只有</strong>30%</strong>。这里我们观察一下第二个结果<code>A0A1W6L588</code> ，来自 <em>Rhizobacter gummiphilus</em> 的 DLH domain-containing protein，简称DLH。序列比对情况如下：</p>
+<p>​	<img src="CB_fig_3.png" alt="UniProt_BLAST" />
+从序列比对中，我们可以发现，DLH与PETase的底物结合位点和催化三联体均保守，推测DLH同样可以水解PET。</p>
+<h4><a class="header" href="#blast的本地版你和菌菌的秘密花园" id="blast的本地版你和菌菌的秘密花园">BLAST的本地版，你和菌菌的秘密花园</a></h4>
+<blockquote>
+<p>问题：201X年，A组报道B菌有降解有机物C的活性，在数据库中可以查到C的降解方式，且B菌基因组已经被测序。</p>
+<p>流程：获取B菌基因组，确定降解通路中涉及蛋白质的序列，安装本地版BLAST软件，BLAST。 </p>
+</blockquote>
+<hr />
+<p>BLAST本地版安装</p>
+<p>访问NCBI的BLAST网站，下载可执行程序（<a href="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/">点击访问ftp站点</a>)</p>
+<p>NCBI的速度一向不行，所以我们要在服务器上先安装高速下载工具<code>axel</code>: </p>
+<pre><code class="language-shell">sudo apt-get install axel
+</code></pre>
+<p><code>axel</code> 中的<code> - n</code> 可以设置连接数，不建议过大，会导致NCBI封禁你的IP地址。 此处下载的是linux版本的BLAST 2.9.0， 支持V5数据库。</p>
+<pre><code class="language-shell">axel -n 20 ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.9.0+-x64-linux.tar.gz
+</code></pre>
+<p>解压文件：</p>
+<pre><code class="language-shell">tar -vxzf ncbi-blast-2.9.0+-x64-linux.tar.gz
+</code></pre>
+<p>将文件拷贝进<code>/opt</code>:</p>
+<pre><code class="language-shell">sudo cp -r ncbi-blast-2.9.0+/opt
+</code></pre>
+<p>添加路径至<code>.bashrc</code>文件:</p>
+<pre><code class="language-shell">vi ~/.bashrc
+</code></pre>
+<p>确保键盘处于英文输入状态，按下<code>shift + G</code>，定位到文件最后一行，然后按下<code>o</code>，添加：</p>
+<pre><code class="language-shell">export PATH=&quot;$PATH:/opt/ncbi-blast-2.9.0+/bin:&quot;
+</code></pre>
+<p>按下<code>ESC</code>，按住<code>shift</code>连敲两下<code>z</code>键，保存退出文件。</p>
+<pre><code class="language-shell">source ~/.bashrc
+</code></pre>
+<p>此时，输入<code>blastp -version</code>，回车，应当可以看见：</p>
+<blockquote>
+<p>blastp: 2.9.0+</p>
+<p>Package: blast 2.9.0, build Mar 11 2019 15:20:05</p>
+</blockquote>
+<p>代表安装成功。</p>
+<hr />
+<ol>
+<li>有报道称 <em>Phialophora americana</em> 可以降解<code>Zearalenone (ZEN)</code>，已知<code>ZEN lactonase (ZHD101)</code>的<a href="https://www.uniprot.org/uniprot/Q8NKB0.fasta">序列</a>，在NCBI中可以查询到 <em>P. americana</em> 的完整<a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/835/435/GCA_000835435.1_Capr_semi_CBS27337_V1/GCA_000835435.1_Capr_semi_CBS27337_V1_protein.faa.gz">蛋白质组</a>。</li>
+<li>分别下载<code>ZHD101</code>和 <em>P. americana</em> 全部蛋白质序列，分别保存为<code>Q8NKB0.fasta</code>和<code>Pa.fasta</code>。</li>
+</ol>
+<pre><code class="language-shell">wget https://www.uniprot.org/uniprot/Q8NKB0.fasta
+axel -n 10 ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/835/435/GCA_000835435.1_Capr_semi_CBS27337_V1/GCA_000835435.1_Capr_semi_CBS27337_V1_protein.faa.gz 
+gunzip GCA_000835435.1_Capr_semi_CBS27337_V1_protein.faa.gz 
+mv GCA_000835435.1_Capr_semi_CBS27337_V1_protein.faa Pa.fasta
+</code></pre>
+<ol start="3">
+<li>建立本地 <em>P. americana</em> 数据库：</li>
+</ol>
+<pre><code class="language-shell">makeblastdb -in Pa.fasta -dbtype prot -out Pa
+</code></pre>
+<ol start="4">
+<li>运行本地BLAST:</li>
+</ol>
+<pre><code class="language-shell">blastp -query Q8NKB0.fasta -db Pa &gt; zhd101_Pa.txt
+</code></pre>
+<blockquote>
+<p>本例的现实意义在于：你的课题组筛到了菌，测了基因组，要在里面找这个蛋白序列，你不能提前上传到NCBI，只能自己本地BLAST。</p>
+</blockquote>
+<h3><a class="header" href="#多序列比对与进化树今天我们都是达尔文" id="多序列比对与进化树今天我们都是达尔文">多序列比对与进化树，今天我们都是达尔文</a></h3>
+<blockquote>
+<p>问题：对于一组序列，需要对其并观察保守位点，产生MSA (multiple sequence alignment) 文件，绘制进化树。</p>
+<p>流程：准备fasta文件，安装muscle，产生比对文件，安装FastTree，构建进化树，<a href="https://itol.embl.de/">iTOL</a>在线可视化。</p>
+<p>需求：Ubuntu</p>
+</blockquote>
+<ol>
+<li>下载一组<code>globin</code>的蛋白序列：</li>
+</ol>
+<pre><code class="language-shell">wget https://raw.githubusercontent.com/EddyRivasLab/hmmer/master/tutorial/globins45.fa
+</code></pre>
+<ol start="2">
+<li>安装<code>muscle</code>：</li>
+</ol>
+<pre><code class="language-shell">sudo apt-get install muscle
+</code></pre>
+<ol start="3">
+<li>运行<code>muscle</code>产生适合观察的<code>CLUSTALW</code>格式：</li>
+</ol>
+<pre><code class="language-shell">muscle -in globins45.fa -out globins45.clw -clw
+</code></pre>
+<p>​		产生适合其他软件读取的<code>fasta</code>格式：</p>
+<pre><code class="language-shell">muscle -in globins45.fa -out globins45.ali
+</code></pre>
+<ol start="4">
+<li>下载安装<code>FastTree</code>，前面安装BLAST时，已经将 /opt/ncbi-blast-2.9.0+/bin 添入～/.bashrc：</li>
+</ol>
+<pre><code class="language-shell">wget http://www.microbesonline.org/fasttree/FastTree
+chmod +x FastTree
+sudo cp FastTree /opt/ncbi-blast-2.9.0+/bin/
+</code></pre>
+<ol start="5">
+<li>构建进化树：</li>
+</ol>
+<pre><code class="language-shell">FastTree globins45.ali &gt; globins45.tree
+</code></pre>
+<ol start="6">
+<li>将<code>globins45.tree</code>文件上传至<a href="https://itol.embl.de/">iTOL</a>在线可视化</li>
+</ol>
+<h3><a class="header" href="#hmmer比blast更进一步" id="hmmer比blast更进一步">HMMER，比BLAST更进一步</a></h3>
+<blockquote>
+<p>背景：之前，讨论了如何利用BLAST搜索同源蛋白。对于一个蛋白质家族，其中如果有多条实验验证过功能的序列，同时序列之间差异较大，无法选择合适的一条序列时，使用HMMER进行搜索。HMMER已经展现了比BLAST更高的准确率，正在变得更加普及。</p>
+<p>问题：糖苷水解酶是一类广泛分布的水解酶，糖苷水解酶家族非常庞大，序列复杂性非常高，纤维素酶（3.2.1.4）通常属于GH5，但是在GH11、GH45等家族中也有分布，同样的，GH5家族内也有许多酶不属于3.2.1.4。我们搜索C真菌内是否有GH5家族的纤维素酶。</p>
+<p>流程：获得C的所有蛋白质序列，构建GH5纤维素酶的隐普马尔科夫模型，使用HMMER搜索。</p>
+</blockquote>
+<ol>
+<li>下载C蛋白序列（和本地BLAST教程使用的是同一物种）</li>
+</ol>
+<pre><code class="language-shell">axel -n 10 ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/835/435/GCA_000835435.1_Capr_semi_CBS27337_V1/GCA_000835435.1_Capr_semi_CBS27337_V1_protein.faa.gz
+gunzip GCA_000835435.1_Capr_semi_CBS27337_V1_protein.faa.gz 
+mv GCA_000835435.1_Capr_semi_CBS27337_V1_protein.faa Pa.fasta
+</code></pre>
+<ol start="2">
+<li>安装HMMER：</li>
+</ol>
+<pre><code class="language-shell">sudo apt-get install hmmer
+</code></pre>
+<ol start="2">
+<li>下载GH5纤维素酶序列，这些序列是我从Swiss-Prot里下载的总共30条仅包含GH5的纤维素酶：</li>
+</ol>
+<pre><code class="language-shell">wget 139.224.116.102/GH5_3_2_1_4.fasta
+</code></pre>
+<ol start="3">
+<li>多序列比对：</li>
+</ol>
+<blockquote>
+<p>HMM profile的准确率严重依赖于多序列比对的正确性，而多序列比对有意义的前提在于被对齐的序列首先在高级结构上是一致的。所以我写了一个小脚本，限制序列长度的范围在平均值的（0.8, 1.2）之内。</p>
+</blockquote>
+<pre><code class="language-shell">wget 139.224.116.102/filter.py
+python3 filter.py GH5_3_2_1_4.fasta GH5_3_2_1_4.fas
+muscle -in GH5_3_2_1_4.fas -out GH5_3_2_1_4.ali
+</code></pre>
+<ol start="4">
+<li>构建HMM profile：</li>
+</ol>
+<pre><code class="language-shell">hmmbuild GH5_3_2_1_4.hmm GH5_3_2_1_4.ali
+</code></pre>
+<ol start="5">
+<li>用HMM profile给序列打分：</li>
+</ol>
+<pre><code class="language-shell">hmmsearch GH5_3_2_1_4.hmm Pa.fasta
+</code></pre>
+<p>对于<em>P. americana</em> 似乎没有明显的属于GH5的cellulase。<code>P10477</code>没有包含在过滤之后建HMM的序列里，因为长度太长了，<code>GH5_3_2_1_4.hmm</code>对<code>P10477</code>打分为<code>327.8</code>。下图为hmmsearch结果：</p>
+<p><img src="hmm_out.png" alt="png" /></p>
+<h4><a class="header" href="#hmm简介" id="hmm简介">HMM简介</a></h4>
+<h3><a class="header" href="#interproscan更大更全" id="interproscan更大更全">InterproScan，更大更全</a></h3>
+<p><a href="https://www.ebi.ac.uk/interpro/search/sequence/">InterPro</a>通过将蛋白质分类为家族并预测域和重要位点来提供蛋白质的功能分析。 InterPro结合所有权威的数据库包括pfam，cdd，gene3d，prosite等15个数据库，非常适合预测蛋白质的结构域。</p>
+<p><img src="interpro.png" alt="png" /></p>
+<h3><a class="header" href="#对一条蛋白质序列进行手动注释" id="对一条蛋白质序列进行手动注释">对一条蛋白质序列进行手动注释</a></h3>
+<blockquote>
+<p>背景：在HMMER的例子中，我们发现了<code> KIW72333.1</code>这条机器注释为hypothetical protein的序列，下面我们介绍一下怎么样使用这几个数据库和软件完成注释。</p>
+<p>问题：对于一条测序得到的蛋白序列，使用生信手段初步预测其大致功能。</p>
+<p>流程：结合BLAST、HMMER和InterPro，推测其生物学功能。</p>
+</blockquote>
+<ol>
+<li>获取序列<code> KIW72333.1</code>：</li>
+</ol>
+<pre><code class="language-html">&gt;KIW72333.1 hypothetical protein PV04_00533 [Phialophora americana]
+MATGILKVKGTQVVGNDGKPVILRGCAIGGWLNMENFIVGYPGHESSIRAAMLAAMGQENYDFFFDRWLYYFFTEADAKF
+FKSMGLNCIRIPFNYRHFEDDMNPRVLKESGFKHLDRVIDLCAKEGIYTILDMHTVPGGQGPGWHADNTTSYAAFWDYKD
+HQDRTVWLWEQLAQRYKGNPWIAGYNPINEPCDPKHVRLPAFYARFEKAIRAIDPDHILWLDGNTFAAEWKGFDTVLPNC
+VYALHDYSMMGFPTGRPYEGTAEQKERLERQFLRKSEFQRTHNTAIWNGEFGPVYANPKWDENAEEVNQKRYNMLGEQLR
+IYDKFQIPWSIWLWKDVGLQGMVYTSPDSAWNKLIEPILEKKKRLQLDAWGKYPSKEVEDLIQPLVSWIDSVSPTAKDVY
+PSTWNTARHIERQVLQTFLAETFCQEFAELFRDKDQAALEELAKSFSFENCVQRDGLNKIMSDYAAIATSSGGK
+</code></pre>
+<ol start="2">
+<li>BLAST搜索Swiss-Prot数据库</li>
+</ol>
+<p>发现其与一个木糖酶（3.2.1.37）<code>W8QRE4</code>有极高的同源性，且此木聚糖酶属于GH5家族且没有纤维素酶（3.2.1.4）活性。</p>
+<ol start="3">
+<li>InterPro搜索</li>
+</ol>
+<p>发现其被注释为GH5家族，GH5家族常见纤维素酶（3.2.1.4）</p>
+<ol start="4">
+<li>本地HMM搜索</li>
+</ol>
+<p>发现<code> KIW72333.1</code>与GH5的纤维素酶相似度不高，和<code>W8QRE4</code>与GH5的纤维素酶相似度相仿。</p>
+<p><img src="annotation.png" alt="png" /></p>
+<ol start="5">
+<li>推测，<code> KIW72333.1</code>有可能是一个少见的属于GH5家族的木聚糖酶，有可能广泛存在着属于GH5的木聚糖酶，下面的思路是可以分析一下整个GH5家族其他的蛋白序列，看看有没有不明显属于纤维素酶但和木聚糖酶比较相似的。</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="Python.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="Python.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

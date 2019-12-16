@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Linux基础 - 计算机与生物学</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded "><a href="序言.html"><strong aria-hidden="true">1.</strong> 序言</a></li><li class="expanded "><a href="LINUX.html" class="active"><strong aria-hidden="true">2.</strong> Linux基础</a></li><li class="expanded "><a href="Python.html"><strong aria-hidden="true">3.</strong> Python基础</a></li><li class="expanded "><a href="functional_genomics.html"><strong aria-hidden="true">4.</strong> 功能基因组学</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">计算机与生物学</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2><a class="header" href="#linux基础" id="linux基础">LINUX基础</a></h2>
+<h3><a class="header" href="#linux与ubuntu" id="linux与ubuntu">Linux与Ubuntu</a></h3>
+<p>还记得黑客们没有图标的屏幕上跳动的绿色字符么，而且他们似乎完全不需要鼠标。</p>
+<p><img src="hkdg.png" alt="png" /></p>
+<p>其实在出现可视化界面之前，搞计算机的都在终端里面敲命令行。对于生物信息学相关的软件来说，基本上只有在线服务器和一些昂贵的收费软件是通过点击鼠标完成的，大部分的软件还是需要在终端里通过命令行运行的，平时的文件格式的处理什么的工作也会在命令行里得到快速的完成。</p>
+<p>Windows有CMD，Mac有自己的Treminal，但是我们要向大家介绍一个新的系统：Linux。</p>
+<p>Linux是一类开源的操作系统，在服务器上基本上都运行着Linux，Ubuntu属于其中的一个发行版，也是整个教程依赖的操作系统。</p>
+<p>伴随着云端技术的发展，我们每个人都可以拥有一台自己的云服务器。建议读者注册一个<a href="https://promotion.aliyun.com/ntms/act/campus2018.html?utm_content=se_1003916228&amp;gclid=Cj0KCQiA_rfvBRCPARIsANlV66NZ16SvWp2NVLVWwky1z3gsQaR7dGqzz8rTf8XP15ndhBfMTtC18ecaAkvjEALw_wcB">阿里云</a>或者<a href="https://cloud.tencent.com/act/campus?fromSource=gwzcw.1293314.1293314.1293314&amp;cps_key=806a34e58199d2e0ccdf9a10ef0ba6ac">腾讯云</a>，学生套餐一年也就一百多，具体怎么注册我就不赘述了，选择系统镜像时选择Ubuntu。</p>
+<p>重要的事情说三遍：<strong>Linux</strong>，<strong>Linux</strong>，<strong>Linux</strong>！</p>
+<h3><a class="header" href="#使用终端连接服务器" id="使用终端连接服务器">使用终端连接服务器</a></h3>
+<p>对于MAC，打开终端，对于Windows，打开cmd，输入：</p>
+<pre><code class="language-shell">ssh &lt;username&gt;@ip
+</code></pre>
+<p>按下<code>回车</code>键后输入密码（这里的密码不会显示出来）</p>
+<pre><code class="language-shell">ssh test@49.234.109.154
+</code></pre>
+<p>还没有自己的ubuntu可以先用我的，这个是我的腾讯云的地址，密码是<code>testabc</code>。上面部署了这个教程所需的大部分软件。</p>
+<p>建议你使用自己的云服务器，或者直接在电脑上安装双系统，或者直接在实验室找一台旧电脑安装Ubuntu，你会发现Ubuntu能让你的旧电脑变快。</p>
+<h3><a class="header" href="#linux常用命令" id="linux常用命令">Linux常用命令</a></h3>
+<p>下面介绍一些Linux的常用命令（command）：</p>
+<table><thead><tr><th>Command</th><th>含义</th></tr></thead><tbody>
+<tr><td>ls</td><td>list, 列出当前目录下所有文件和子目录</td></tr>
+<tr><td>cd</td><td>Change directory, 进入某一目录</td></tr>
+<tr><td>pwd</td><td>print working directory, 显示当前路径</td></tr>
+<tr><td>vi</td><td>View, 查看某一文件，可以编辑</td></tr>
+<tr><td>less</td><td>查看某一文件，但是不会把文件全部读入内存</td></tr>
+<tr><td>head</td><td>查看前十行</td></tr>
+<tr><td>tail</td><td>查看文件最后十行</td></tr>
+<tr><td>grep</td><td>抓取文件中含有某字符串的所有行</td></tr>
+<tr><td>cp</td><td>Copy, 拷贝文件</td></tr>
+<tr><td>mv</td><td>Move, 移动文件</td></tr>
+<tr><td>wc</td><td>Word count, 查看文件总行数，词数，字符数</td></tr>
+<tr><td>rm</td><td>Remove, 删除文件</td></tr>
+<tr><td>mkdir</td><td>Make directory, 创建新的目录</td></tr>
+<tr><td>cat</td><td>打印文件到屏幕</td></tr>
+<tr><td>sort</td><td>排序</td></tr>
+<tr><td>top</td><td>显示运行状况</td></tr>
+<tr><td>chmod</td><td>Change mode, 修改文件权限</td></tr>
+</tbody></table>
+<p>常用的还有<code>tar</code>、<code>awk</code>、<code>sed</code>等，具体的使用方法会在后续的教程里一一体现。大家不要对命令行界面存在畏难情绪，其实我一开使用也很不习惯，但是多用用就会发现其中的快捷方便之处了。如果能初步掌握<code>awk</code>和<code>sed</code>你会发现打开了新世界的大门，文件格式的处理是相当的方便。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="序言.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="Python.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="序言.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="Python.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
